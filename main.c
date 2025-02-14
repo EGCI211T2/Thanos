@@ -1,3 +1,5 @@
+#include monster.h
+
 int main() {
 
   Thanos T;
