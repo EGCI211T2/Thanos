@@ -1,19 +1,29 @@
-#define N 6
-#include <stdio.h>
-
-#include "sorting.h"
-
 int main() {
-  int a[N]={3,2,6,7,3,1};
-  int i,j,new_number;
 
-   display(a,N);
-  bubbleSort(a,N); 
-   //insertion(a,N);
+  Thanos T;
+  int n;
+  cout<<"How many monsters?";
+  cin>>n;
 
-  // selectionSort(a,N);
-   display(a,N);
- return 0;
+  monster *m=new monster[n]; //make sure they have hp
+ 
+  /* Add some story*/
+
+  ++T;
+  ++T;
+  T.snap_finger(m,n);
+  ++T;
+  ++T;
+  T.snap_finger(m,n);
+    ++T;
+  ++T;
+  T.snap_finger(m,n);
+
+  int i;
+  for(i=0;i<n;i++)
+      m[i].print();
+  
+
+  delete [] m;
+
 }
-
-
