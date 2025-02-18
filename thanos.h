@@ -11,7 +11,10 @@ public:
         srand(time(0)); 
     }
 
-    ~Thanos() { cout << "Thanos wins!" << endl; }
+    ~Thanos() { 
+        cout << "\nThanos wins!" << endl;
+        cout << "\nThanos Always wins.\n" << endl;
+    }
 
     void operator++() { 
         stones++; 
@@ -39,6 +42,7 @@ public:
     void snap_finger(Monster monsters[], int n) {
         if (stones < 6) { 
             stones++;
+            cout << "Thanos try to snap." << endl;
             cout << "Not enough stones! Thanos gain a stone." << endl; 
         }
         else {
@@ -53,7 +57,7 @@ public:
             monsters[randIndex].hp = 0;
             cout << monsters[randIndex].name << " has perished!" << endl;
             }
-            cout << "\nStones been used. Starting at " << stones << " again." << endl;
+            cout << "\nStones have been used up! Stones: " << stones << endl;
         }
         return; 
     }
